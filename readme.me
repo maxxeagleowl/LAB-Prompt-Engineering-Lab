@@ -1,0 +1,84 @@
+# Prompt Engineering Lab
+
+## Overview
+
+This project focuses on improving prompt reliability for three core tasks:
+
+- Sentiment Analysis
+- Product Description Generation
+- Data Extraction
+
+The goal was to transform simple zero-shot prompts into production-ready prompts through systematic testing, iteration, and the application of advanced prompt engineering techniques.
+
+---
+
+## Project Structure
+
+prompt-engineering-lab/
+│
+├── prompt_engineering_lab.ipynb
+├── lab_summary.md
+├── failure_analysis.md
+├── improved_prompts.md
+│
+└── error/
+├── Error 1.png
+└── Error 2.png
+
+---
+
+## How to Run
+
+1. Set your OpenAI API key:
+
+```python
+import os
+os.environ["OPENAI_API_KEY"] = "your-api-key"
+
+2. Open the notebook:
+prompt_engineering_lab.ipynb
+
+2. Run all cells from top to bottom
+
+Important:
+
+Run cells in order to avoid NameError issues
+Ensure API key is valid to avoid AuthenticationError
+
+---
+
+## Key Steps
+
+- Created initial zero-shot prompts (v1)
+- Ran prompts 5, 10, and 15 times
+- Identified failure patterns
+- Improved prompts with:
+    - constraints
+    - structured outputs
+    -few-shot examples
+    -step-by-step reasoning
+- Measured consistency improvements across versions
+
+---
+
+| Task                 | v1 Consistency | v2 Consistency | v3 Consistency |
+|----------------------|---------------:|---------------:|---------------:|
+| Sentiment Analysis   |        40.00%  |       100.00%  |       100.00%  |
+| Product Description  |        13.33%  |        40.00%  |        86.67%  |
+| Data Extraction      |       100.00%  |       100.00%  |       100.00%  |
+
+---
+
+## Key Learnings
+- prompts must be tested multiple times to evaluate reliability
+- output constraints are critical for consistency
+- few-shot examples strongly improve classification tasks
+- structured formats are essential for data extraction
+- over-constraining prompts can lead to incorrect outputs
+- different task types require different prompt strategies
+
+---
+
+## Notes
+- error screenshots are included in the /error folder
+- troubleshooting explanations are documented in the notebook
